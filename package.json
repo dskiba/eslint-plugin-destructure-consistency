@@ -1,0 +1,59 @@
+{
+  "name": "eslint-plugin-destructure-consistency",
+  "version": "0.1.0",
+  "description": "ESLint plugin enforcing consistency between object literal keys passed into a function and keys destructured from the function result.",
+  "author": "Dan Skiba",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskiba/eslint-plugin-destructure-consistency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dskiba/eslint-plugin-destructure-consistency/issues"
+  },
+  "homepage": "https://github.com/dskiba/eslint-plugin-destructure-consistency#readme",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "typescript",
+    "destructuring"
+  ],
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "bun run build && bun test"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@typescript-eslint/rule-tester": "^8.25.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}

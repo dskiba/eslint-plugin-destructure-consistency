@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.idea/
+
+.DS_Store
+*.tgz
+*.log
+coverage/
+.nyc_output/
